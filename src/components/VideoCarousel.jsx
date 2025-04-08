@@ -25,6 +25,8 @@ const VideoCarousel = () => {
   useGSAP(() => {
     gsap.to("#slider", {
       x: `-${100 * videoId}%`,
+      duration: 2,
+      ease: "power2.inOut",
     });
     gsap.to("#video", {
       scrollTrigger: {
