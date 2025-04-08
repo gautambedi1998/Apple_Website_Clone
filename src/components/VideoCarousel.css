@@ -1,0 +1,13 @@
+#carasollDiv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+#innerDiv {
+  padding: 20px 20px 20px 20px;
+}
+#button {
+  padding: 8px;
+  border-radius: 20px;
+}
