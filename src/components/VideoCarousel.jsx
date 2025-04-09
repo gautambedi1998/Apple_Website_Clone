@@ -45,7 +45,6 @@ const VideoCarousel = () => {
 
   useEffect(() => {
     const videoEl = videoRef.current[videoId];
-    debugger;
     if (loadedData.length > 3 && videoEl) {
       if (!isPlaying) {
         videoEl.pause();
@@ -129,12 +128,22 @@ const VideoCarousel = () => {
           ...prev,
           isLastVideo: true,
         }));
+        break;
 
       case "play":
         setVideo((prev) => ({
           ...prev,
           isPlaying: !prev.isPlaying,
-          videoId: i,
+          // videoId: i,
+        }));
+        break;
+
+      case "pause":
+        console.log("Toggle play/pause:", !video.isPlaying);
+        setVideo((prev) => ({
+          ...prev,
+          isPlaying: !prev.isPlaying,
+          // videoId: i,
         }));
         break;
 
